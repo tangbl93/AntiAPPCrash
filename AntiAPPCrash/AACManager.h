@@ -11,6 +11,10 @@
 typedef NS_ENUM(NSUInteger,AACCrashType) {
     /** 未识别的方法，找不到方法实现 */
     AACCrashTypeUnrecognizedSelector = 0,
+    /** 未在主线程 Present 控制器*/
+    AACCrashTypeAccessingCachedSystemAnimationFence,
+    /** Present 一个已经被 Present 的控制器 */
+    AACCrashTypePresentModallyActiveController,
 };
 typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString *reason);
 
