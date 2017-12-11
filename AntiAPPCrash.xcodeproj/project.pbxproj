@@ -79,6 +79,7 @@
 		4D0206AD1FDA6205009B09E7 = {
 			isa = PBXGroup;
 			children = (
+				4D42751F1FDEB9A90077442B /* README.md */,
 				4D0206B91FDA6206009B09E7 /* AntiAPPCrash */,
 				4D0206C71FDA623F009B09E7 /* AntiAPPCrashDemo */,
 				4D0206B81FDA6206009B09E7 /* Products */,
@@ -120,7 +121,6 @@
 				4D0206D31FDA623F009B09E7 /* LaunchScreen.storyboard */,
 				4D0206D61FDA623F009B09E7 /* Info.plist */,
 				4D0206D71FDA623F009B09E7 /* main.m */,
-				4D42751F1FDEB9A90077442B /* README.md */,
 			);
 			path = AntiAPPCrashDemo;
 			sourceTree = "<group>";

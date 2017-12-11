@@ -1,0 +1,36 @@
+# AntiAPPCrash
+
+[正在开发中] 防止APP运行时崩溃
+
+# 前言
+
+目前工作中一直在处理崩溃问题，所以会整理出一套防止崩溃的框架出来。而且现在有很多前辈已经整理出合适的逻辑出来，我所做的也就是整理出一套足够简单有效的框架而已。
+
+# 如何触发崩溃
+
+目前支持的崩溃基本都会在 `ViewController.m` 中会编写一个触发的例子
+
+# 思路
+
+1. 基本会让原有的崩溃保留一个崩溃信息，但是因为方法替换所以导致调用栈获取到的不是需要的，因而得到的信息也远没有原有的详细。
+2. 其次是能正常走完设计的逻辑就让正常走完，实在没办法的就不处理。
+3. 再其次，目前的打算是基本只对用户暴露出一个 `AACManager` 类，崩溃的类型也在这里定义，错误的处理也在其中，案例如下：
+
+```objc
+[AACManager sharedInstance].recordCrashBlock = ^(id instance, AACCrashType type, NSString *reason) {
+    NSLog(@"AACManager recordCrashBlock class = %@,type = %ld, reason = %@",instance,type,reason);
+};
+```
+
+4. 暂时还没有设计开关，打算在项目中先测一波，看看会不会有BUG，会不会导致其他的崩溃等等
+
+# 目前支持的类型
+
+- unrecognized selector
+- accessing _cachedSystemAnimationFence requires the main thread
+- Application tried to present modally an active controller
+
+# 参考的案例
+
+- [Dr.Light](https://github.com/zanyfly/Dr.Light)
+- [AvoidCrash](https://github.com/chenfanfang/AvoidCrash)
