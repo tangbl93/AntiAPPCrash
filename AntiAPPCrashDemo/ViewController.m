@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "AACManager.h"
+#import <AntiAPPCrash/AntiAPPCrash.h>
 
 @interface ViewController ()
 
@@ -42,16 +42,16 @@
 //}
 
 // setObject:forKey
-//- (void)testsetobjectforkey {
-//    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
-//    [tmp setObject:nil forKey:@"key"];
-//}
+- (void)testsetobjectforkey {
+    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
+    [tmp setObject:nil forKey:@"key"];
+}
 
 // unrecognized selector
 //- (void)unrecognized_selector{}
 - (void)testunrecognized_selector {
     NSObject *xx = [[NSObject alloc] init];
-    [self performSelector:@selector(unrecognized_selector) withObject:nil afterDelay:0];
+    [self performSelector:@selector(yyyyyyyyyyyyyyyyyyyyyyyy) withObject:nil afterDelay:0];
 }
 
 - (void)testpresent {

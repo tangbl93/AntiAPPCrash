@@ -15,3 +15,4 @@ FOUNDATION_EXPORT double AntiAPPCrashVersionNumber;
 FOUNDATION_EXPORT const unsigned char AntiAPPCrashVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AntiAPPCrash/PublicHeader.h>
+#import <AntiAPPCrash/AACManager.h>
