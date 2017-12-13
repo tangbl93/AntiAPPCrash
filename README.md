@@ -2,6 +2,10 @@
 
 [正在开发中] 防止APP运行时崩溃
 
+# 导入到项目
+
+`pod 'AntiAPPCrash', :git => 'https://gitee.com/gongguo/AntiAPPCrash.git'`
+
 # 如何触发崩溃
 
 目前支持的崩溃基本都会在 `ViewController.m` 中会编写一个触发的例子
