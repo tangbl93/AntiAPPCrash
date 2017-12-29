@@ -15,6 +15,8 @@ typedef NS_ENUM(NSUInteger,AACCrashType) {
     AACCrashTypeAccessingCachedSystemAnimationFence,
     /** Present 一个已经被 Present 的控制器 */
     AACCrashTypePresentModallyActiveController,
+    /** Present 一个空的控制器 */
+    AACCrashTypePresentNilModalViewController,
 };
 typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString *reason);
 

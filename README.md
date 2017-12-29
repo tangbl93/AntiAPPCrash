@@ -29,6 +29,7 @@
 - unrecognized selector
 - accessing _cachedSystemAnimationFence requires the main thread
 - Application tried to present modally an active controller
+- Application tried to present a nil modal view controller on target
 
 # 参考的案例
 
