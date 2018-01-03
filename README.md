@@ -32,6 +32,7 @@
 - Application tried to present modally an active controller
 - Application tried to present a nil modal view controller on target
 - index beyond bounds
+- add self as subview
 
 # 参考的案例
 

@@ -26,7 +26,7 @@
     
 //    [self testchuyi0];
 //    [self testsetobjectforkey];
-    [self testunrecognized_selector];
+//    [self testunrecognized_selector];
 //
 //    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
 //    [self.view addSubview:tf];
@@ -34,8 +34,18 @@
 //
 //    [self testpresent];
     
-    
+    [self testaddselfassubview];
 //    [self testindexbeyondbounds];
+}
+
+- (void)testaddselfassubview {
+    UIView *v1 = [UIView new];
+    
+    // Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Can't add self as subview'
+    [v1 addSubview:v1];
+    
+//    [AACManager sharedInstance].enable = NO;
+//    [self testaddselfassubview];
 }
 
 - (void)testindexbeyondbounds {

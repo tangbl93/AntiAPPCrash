@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger,AACCrashType) {
     AACCrashTypePresentNilModalViewController,
     /* 数组越界异常*/
     AACCrashTypeIndexBeyondBounds,
+    /* UIView 将自身作为 subview*/
+    AACCrashTypeAddSelfAsSubview,
 };
 typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString *reason);
 
