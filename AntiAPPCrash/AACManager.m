@@ -34,6 +34,14 @@
     return instance;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.enable = YES;
+    }
+    return self;
+}
+
 #pragma mark - 记录方法失败
 
 + (void)recordCrashLogWithInstance:(id)instance type:(AACCrashType)type reason:(NSString *)reason{

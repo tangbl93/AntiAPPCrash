@@ -59,7 +59,7 @@ void emptyMethodIMP(){}
     // 获取默认的方法,判断默认的方法是否可以调用
     NSMethodSignature *methodSignature;
     methodSignature = [self aac_methodSignatureForSelector:aSelector];
-    if (methodSignature) {
+    if (methodSignature || ![AACManager sharedInstance].enable) {
         return methodSignature;
     }
 

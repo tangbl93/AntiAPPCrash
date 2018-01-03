@@ -14,7 +14,8 @@
 
 1. 基本会让原有的崩溃保留一个崩溃信息，但是因为方法替换所以导致调用栈获取到的不是需要的，因而得到的信息也远没有原有的详细。
 2. 其次是能正常走完设计的逻辑就让正常走完，实在没办法的就不处理。
-3. 再其次，目前的打算是基本只对用户暴露出一个 `AACManager` 类，崩溃的类型也在这里定义，错误的处理也在其中，案例如下：
+3. 所有的崩溃原因都尽可能带上异常名称，如 NSInvalidArgumentException，NSRangeException等等
+4. 再其次，目前的打算是基本只对用户暴露出一个 `AACManager` 类，崩溃的类型也在这里定义，错误的处理也在其中，案例如下：
 
 ```objc
 [AACManager sharedInstance].recordCrashBlock = ^(id instance, AACCrashType type, NSString *reason) {
@@ -22,7 +23,7 @@
 };
 ```
 
-4. 暂时还没有设计开关，打算在项目中先测一波，看看会不会有BUG，会不会导致其他的崩溃等等
+5. 设置开关，通过  `[AACManager sharedInstance].enable = NO;` , 默认开启
 
 # 目前支持的类型
 

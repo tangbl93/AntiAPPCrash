@@ -25,6 +25,11 @@ typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString
 @interface AACManager : NSObject
 
 /**
+ 开关,默认打开
+ */
+@property(nonatomic,assign) BOOL enable;
+
+/**
  记录崩溃信息
  */
 @property(nonatomic,copy) AACManagerRecordCrashBlock recordCrashBlock;

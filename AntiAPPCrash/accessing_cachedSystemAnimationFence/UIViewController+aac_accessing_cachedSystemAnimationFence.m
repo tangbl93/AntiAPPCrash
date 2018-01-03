@@ -22,6 +22,11 @@
 
 - (void)aac_presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ __nullable)(void))completion {
     
+    if (![AACManager sharedInstance].enable) {
+        [self aac_presentViewController:viewControllerToPresent animated:flag completion:completion];
+        return;
+    }
+    
     // Application tried to present a nil modal view controller on target
     if (!viewControllerToPresent) {
         NSString *crashReason = [NSString stringWithFormat:@"Application tried to present a nil modal view controller on target: %@",self];

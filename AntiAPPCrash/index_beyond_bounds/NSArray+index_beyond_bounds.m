@@ -58,30 +58,30 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArrayI
 - (id)aac_NSArrayI_objectAtIndex:(NSUInteger)index {
-    if (index < self.count) {
-        return [self aac_NSArrayI_objectAtIndex:index];
+    if (index >= self.count && [AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,index, __NSArrayIClassName, __objectAtIndexSelectorName);
+        return nil;
     }
-    _report_index_beyond_bounds(self,index, __NSArrayIClassName, __objectAtIndexSelectorName);
-    return nil;
+    return [self aac_NSArrayI_objectAtIndex:index];
 }
 - (id)aac_NSArrayI_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx < self.count) {
-        return [self aac_NSArrayI_objectAtIndexedSubscript:idx];
+    if (idx >= self.count && [AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,idx, __NSArrayIClassName, __objectAtIndexedSubscriptSelectorName);
+        return nil;
     }
-    _report_index_beyond_bounds(self,idx, __NSArrayIClassName, __objectAtIndexedSubscriptSelectorName);
-    return nil;
+    return [self aac_NSArrayI_objectAtIndexedSubscript:idx];
 }
 
 // __NSSingleObjectArrayI
 - (id)aac_NSSingleObjectArrayI_objectAtIndex:(NSUInteger)index {
-    if (index > 0) {
+    if (index > 0 && [AACManager sharedInstance].enable) {
         _report_index_beyond_bounds(self,index, __NSSingleObjectArrayIClassName, __objectAtIndexSelectorName);
         return nil;
     }
     return [self aac_NSSingleObjectArrayI_objectAtIndex:index];
 }
 - (id)aac_NSSingleObjectArrayI_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx > 0) {
+    if (idx > 0 && [AACManager sharedInstance].enable) {
         _report_index_beyond_bounds(self,idx, __NSSingleObjectArrayIClassName, __objectAtIndexedSubscriptSelectorName);
         return nil;
     }
@@ -90,12 +90,18 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArray0
 - (id)aac_NSArray0_objectAtIndex:(NSUInteger)index {
-    _report_index_beyond_bounds(self,index, __NSArray0ClassName, __objectAtIndexSelectorName);
-    return nil;
+    if ([AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,index, __NSArray0ClassName, __objectAtIndexSelectorName);
+        return nil;
+    }
+    return [self aac_NSArray0_objectAtIndex:index];
 }
 - (id)aac_NSArray0_objectAtIndexedSubscript:(NSUInteger)idx {
-    _report_index_beyond_bounds(self,idx, __NSArray0ClassName, __objectAtIndexedSubscriptSelectorName);
-    return nil;
+    if ([AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,idx, __NSArray0ClassName, __objectAtIndexedSubscriptSelectorName);
+        return nil;
+    }
+    return [self aac_NSArray0_objectAtIndexedSubscript:idx];
 }
 
 @end
@@ -116,18 +122,18 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArrayM
 - (id)aac_NSArrayM_objectAtIndex:(NSUInteger)index {
-    if (index < self.count) {
-        return [self aac_NSArrayM_objectAtIndex:index];
+    if (index >= self.count && [AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,index, __NSArrayMClassName, __objectAtIndexSelectorName);
+        return nil;
     }
-    _report_index_beyond_bounds(self,index, __NSArrayMClassName, __objectAtIndexSelectorName);
-    return nil;
+    return [self aac_NSArrayM_objectAtIndex:index];
 }
 - (id)aac_NSArrayM_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx < self.count) {
-        return [self aac_NSArrayM_objectAtIndexedSubscript:idx];
+    if (idx >= self.count && [AACManager sharedInstance].enable) {
+        _report_index_beyond_bounds(self,idx, __NSArrayMClassName, __objectAtIndexedSubscriptSelectorName);
+        return nil;
     }
-    _report_index_beyond_bounds(self,idx, __NSArrayMClassName, __objectAtIndexedSubscriptSelectorName);
-    return nil;
+    return [self aac_NSArrayM_objectAtIndexedSubscript:idx];
 }
 
 @end
