@@ -20,6 +20,8 @@
 		4D4275201FDEB9AA0077442B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D42751F1FDEB9A90077442B /* README.md */; };
 		4D4275271FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D4275251FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h */; };
 		4D4275281FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4275261FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m */; };
+		4D7F37921FFCAA4B00568023 /* NSArray+index_beyond_bounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */; };
+		4D7F37931FFCAA4B00568023 /* NSArray+index_beyond_bounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */; };
 		4DA3FEF31FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA3FEF11FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h */; };
 		4DA3FEF41FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3FEF21FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		4D4275251FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+aac_accessing_cachedSystemAnimationFence.h"; sourceTree = "<group>"; };
 		4D4275261FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+aac_accessing_cachedSystemAnimationFence.m"; sourceTree = "<group>"; };
 		4D49E9F21FE13BF2005BEED9 /* AntiAPPCrash.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AntiAPPCrash.podspec; sourceTree = "<group>"; };
+		4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+index_beyond_bounds.h"; sourceTree = "<group>"; };
+		4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+index_beyond_bounds.m"; sourceTree = "<group>"; };
 		4DA3FEF11FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+aac_unrecognized_selector.h"; sourceTree = "<group>"; };
 		4DA3FEF21FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+aac_unrecognized_selector.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 		4D0206B91FDA6206009B09E7 /* AntiAPPCrash */ = {
 			isa = PBXGroup;
 			children = (
+				4D7F378F1FFCA9E500568023 /* index_beyond_bounds */,
 				4D42751E1FDEB94E0077442B /* accessing_cachedSystemAnimationFence */,
 				4D0206E01FDA66F4009B09E7 /* unrecognized_selector */,
 				4D0206BB1FDA6206009B09E7 /* Info.plist */,
@@ -152,6 +157,15 @@
 			path = accessing_cachedSystemAnimationFence;
 			sourceTree = "<group>";
 		};
+		4D7F378F1FFCA9E500568023 /* index_beyond_bounds */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */,
+				4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */,
+			);
+			path = index_beyond_bounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -160,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0206DE1FDA65DD009B09E7 /* AACManager.h in Headers */,
+				4D7F37921FFCAA4B00568023 /* NSArray+index_beyond_bounds.h in Headers */,
 				4D0206BC1FDA6206009B09E7 /* AntiAPPCrash.h in Headers */,
 				4DA3FEF31FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h in Headers */,
 				4D4275271FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h in Headers */,
@@ -270,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0206DF1FDA65DD009B09E7 /* AACManager.m in Sources */,
+				4D7F37931FFCAA4B00568023 /* NSArray+index_beyond_bounds.m in Sources */,
 				4DA3FEF41FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m in Sources */,
 				4D4275281FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m in Sources */,
 			);

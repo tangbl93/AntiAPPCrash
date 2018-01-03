@@ -25,13 +25,35 @@
     
 //    [self testchuyi0];
 //    [self testsetobjectforkey];
-    [self testunrecognized_selector];
+//    [self testunrecognized_selector];
+//
+//    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    [self.view addSubview:tf];
+//    [tf becomeFirstResponder];
+//
+//    [self testpresent];
     
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [self.view addSubview:tf];
-    [tf becomeFirstResponder];
+    [self testindexbeyondbounds];
+}
+
+- (void)testindexbeyondbounds {
+    // 有多个item __NSArrayI
+    // Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayI objectAtIndexedSubscript:]: index 2 beyond bounds [0 .. 1]'
+    //  Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayI objectAtIndex:]: index 2 beyond bounds [0 .. 1]'
+    // 仅一个item __NSSingleObjectArrayI
+    // Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSSingleObjectArrayI objectAtIndex:]: index 2 beyond bounds [0 .. 0]'
+    // 无item __NSArray0
+    // Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArray0 objectAtIndex:]: index 2 beyond bounds for empty NSArray'
+
+    NSArray *arr1 = @[];
+    NSNumber *v1 = arr1[2];
+    NSNumber *v2 = [arr1 objectAtIndex:2];
     
-    [self testpresent];
+    // Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndexedSubscript:]: index 2 beyond bounds [0 .. 1]'
+    //  Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndex:]: index 2 beyond bounds [0 .. 1]'
+    NSMutableArray *arr2 = [arr1 mutableCopy];
+    NSNumber *v3 = arr2[2];
+    NSNumber *v4 = [arr2 objectAtIndex:2];
 }
 
 //// 除以0
@@ -42,29 +64,29 @@
 //}
 
 // setObject:forKey
-- (void)testsetobjectforkey {
-    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
-    [tmp setObject:nil forKey:@"key"];
-}
+//- (void)testsetobjectforkey {
+//    NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
+//    [tmp setObject:nil forKey:@"key"];
+//}
 
 // unrecognized selector
 //- (void)unrecognized_selector{}
-- (void)testunrecognized_selector {
-    NSObject *xx = [[NSObject alloc] init];
-    [self performSelector:@selector(yyyyyyyyyyyyyyyyyyyyyyyy) withObject:nil afterDelay:0];
-}
+//- (void)testunrecognized_selector {
+//    NSObject *xx = [[NSObject alloc] init];
+//    [self performSelector:@selector(yyyyyyyyyyyyyyyyyyyyyyyy) withObject:nil afterDelay:0];
+//}
 
-- (void)testpresent {
-    
-    UIViewController *vc = [UIViewController new];
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
-        [self presentViewController:vc animated:YES completion:^{
-            
-            [self presentViewController:vc animated:YES completion:^{}];
-            
-        }];
-    });
-    
-}
+//- (void)testpresent {
+//
+//    UIViewController *vc = [UIViewController new];
+//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
+//        [self presentViewController:vc animated:YES completion:^{
+//
+//            [self presentViewController:vc animated:YES completion:^{}];
+//
+//        }];
+//    });
+//
+//}
 
 @end

@@ -30,6 +30,7 @@
 - accessing _cachedSystemAnimationFence requires the main thread
 - Application tried to present modally an active controller
 - Application tried to present a nil modal view controller on target
+- index beyond bounds
 
 # 参考的案例
 

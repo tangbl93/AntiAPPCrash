@@ -17,6 +17,8 @@ typedef NS_ENUM(NSUInteger,AACCrashType) {
     AACCrashTypePresentModallyActiveController,
     /** Present 一个空的控制器 */
     AACCrashTypePresentNilModalViewController,
+    /* 数组越界异常*/
+    AACCrashTypeIndexBeyondBounds,
 };
 typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString *reason);
 
