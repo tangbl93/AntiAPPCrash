@@ -85,7 +85,8 @@ void emptyMethodIMP(){}
     }
     @catch (NSException *exception) {
         [anInvocation invokeWithTarget:[_aacUnrecognizedSelectorProxy sharedInstance]];
-        [AACManager recordCrashLogWithInstance:self type:AACCrashTypeUnrecognizedSelector reason:exception.reason];
+        NSString *reason = [NSString stringWithFormat:@"%@ %@",exception.name,exception.reason];
+        [AACManager recordCrashLogWithInstance:self type:AACCrashTypeUnrecognizedSelector reason:reason];
     }
     @finally {
 
