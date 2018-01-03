@@ -19,13 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [AACManager sharedInstance].enable = NO;
     [AACManager sharedInstance].recordCrashBlock = ^(id instance, AACCrashType type, NSString *reason) {
         NSLog(@"AACManager recordCrashBlock class = %@,type = %ld, reason = %@",instance,type,reason);
     };
     
 //    [self testchuyi0];
 //    [self testsetobjectforkey];
-//    [self testunrecognized_selector];
+    [self testunrecognized_selector];
 //
 //    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
 //    [self.view addSubview:tf];
@@ -33,7 +34,8 @@
 //
 //    [self testpresent];
     
-    [self testindexbeyondbounds];
+    
+//    [self testindexbeyondbounds];
 }
 
 - (void)testindexbeyondbounds {
@@ -70,23 +72,23 @@
 //}
 
 // unrecognized selector
-//- (void)unrecognized_selector{}
-//- (void)testunrecognized_selector {
-//    NSObject *xx = [[NSObject alloc] init];
-//    [self performSelector:@selector(yyyyyyyyyyyyyyyyyyyyyyyy) withObject:nil afterDelay:0];
-//}
+- (void)unrecognized_selector{}
+- (void)testunrecognized_selector {
+    NSObject *xx = [[NSObject alloc] init];
+    [self performSelector:@selector(yyyyyyyyyyyyyyyyyyyyyyyy) withObject:nil afterDelay:0];
+}
 
-//- (void)testpresent {
-//
-//    UIViewController *vc = [UIViewController new];
-//    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
-//        [self presentViewController:vc animated:YES completion:^{
-//
-//            [self presentViewController:vc animated:YES completion:^{}];
-//
-//        }];
-//    });
-//
-//}
+- (void)testpresent {
+
+    UIViewController *vc = [UIViewController new];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
+        [self presentViewController:vc animated:YES completion:^{
+
+            [self presentViewController:nil animated:YES completion:^{}];
+
+        }];
+    });
+
+}
 
 @end
