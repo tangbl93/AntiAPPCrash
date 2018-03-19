@@ -6,7 +6,7 @@
 //  Copyright © 2018年 songguo. All rights reserved.
 //
 
-#import "NSArray+index_beyond_bounds.h"
+#import "NSArray+ObjectTypeError.h"
 
 #import "AACManager.h"
 #import <objc/runtime.h>
@@ -20,20 +20,20 @@ static NSString *__objectAtIndexSelectorName    = @"objectAtIndex:";
 static NSString *__objectAtIndexedSubscriptSelectorName    = @"objectAtIndexedSubscript:";
 
 // Private Methods
-void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *className, NSString *selectorName) {
+void _report_index_beyond_bounds(NSArray *obj,NSUInteger index,NSString *className, NSString *selectorName) {
     NSString *bounds = nil;
-    NSUInteger count = array.count;
+    NSUInteger count = obj.count;
     if (count == 0) {
         bounds = @"for empty array";
     } else {
-        bounds = [NSString stringWithFormat:@"[0 .. %ld]",array.count];
+        bounds = [NSString stringWithFormat:@"[0 .. %ld]",count];
     }
     NSString *crashReason = [NSString stringWithFormat:@"NSRangeException -[%@ %@]: index %ld beyond bounds %@",className,selectorName,index,bounds];
-    [AACManager recordCrashLogWithInstance:array type:AACCrashTypeIndexBeyondBounds reason:crashReason];
+    [AACManager recordCrashLogWithInstance:obj type:AACTypeObjectTypeError reason:crashReason];
 }
 
 #pragma mark - NSArray
-@implementation NSArray (index_beyond_bounds)
+@implementation NSArray (ObjectTypeError)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -58,14 +58,14 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArrayI
 - (id)aac_NSArrayI_objectAtIndex:(NSUInteger)index {
-    if (index >= self.count && [AACManager sharedInstance].enable) {
+    if (index >= self.count && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,index, __NSArrayIClassName, __objectAtIndexSelectorName);
         return nil;
     }
     return [self aac_NSArrayI_objectAtIndex:index];
 }
 - (id)aac_NSArrayI_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx >= self.count && [AACManager sharedInstance].enable) {
+    if (idx >= self.count && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,idx, __NSArrayIClassName, __objectAtIndexedSubscriptSelectorName);
         return nil;
     }
@@ -74,14 +74,14 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSSingleObjectArrayI
 - (id)aac_NSSingleObjectArrayI_objectAtIndex:(NSUInteger)index {
-    if (index > 0 && [AACManager sharedInstance].enable) {
+    if (index > 0 && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,index, __NSSingleObjectArrayIClassName, __objectAtIndexSelectorName);
         return nil;
     }
     return [self aac_NSSingleObjectArrayI_objectAtIndex:index];
 }
 - (id)aac_NSSingleObjectArrayI_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx > 0 && [AACManager sharedInstance].enable) {
+    if (idx > 0 && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,idx, __NSSingleObjectArrayIClassName, __objectAtIndexedSubscriptSelectorName);
         return nil;
     }
@@ -90,14 +90,14 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArray0
 - (id)aac_NSArray0_objectAtIndex:(NSUInteger)index {
-    if ([AACManager sharedInstance].enable) {
+    if ([AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,index, __NSArray0ClassName, __objectAtIndexSelectorName);
         return nil;
     }
     return [self aac_NSArray0_objectAtIndex:index];
 }
 - (id)aac_NSArray0_objectAtIndexedSubscript:(NSUInteger)idx {
-    if ([AACManager sharedInstance].enable) {
+    if ([AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,idx, __NSArray0ClassName, __objectAtIndexedSubscriptSelectorName);
         return nil;
     }
@@ -107,7 +107,7 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 @end
 
 #pragma mark - NSMutableArray
-@implementation NSMutableArray (index_beyond_bounds)
+@implementation NSMutableArray (ObjectTypeError)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -122,14 +122,14 @@ void _report_index_beyond_bounds(NSArray *array,NSUInteger index,NSString *class
 
 // __NSArrayM
 - (id)aac_NSArrayM_objectAtIndex:(NSUInteger)index {
-    if (index >= self.count && [AACManager sharedInstance].enable) {
+    if (index >= self.count && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,index, __NSArrayMClassName, __objectAtIndexSelectorName);
         return nil;
     }
     return [self aac_NSArrayM_objectAtIndex:index];
 }
 - (id)aac_NSArrayM_objectAtIndexedSubscript:(NSUInteger)idx {
-    if (idx >= self.count && [AACManager sharedInstance].enable) {
+    if (idx >= self.count && [AACManager enableForType:AACTypeObjectTypeError]) {
         _report_index_beyond_bounds(self,idx, __NSArrayMClassName, __objectAtIndexedSubscriptSelectorName);
         return nil;
     }

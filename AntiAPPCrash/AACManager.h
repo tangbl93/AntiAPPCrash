@@ -8,44 +8,49 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger,AACCrashType) {
-    /** 未识别的方法，找不到方法实现 */
-    AACCrashTypeUnrecognizedSelector = 0,
-    /** 未在主线程 Present 控制器*/
-    AACCrashTypeAccessingCachedSystemAnimationFence,
-    /** Present 一个已经被 Present 的控制器 */
-    AACCrashTypePresentModallyActiveController,
-    /** Present 一个空的控制器 */
-    AACCrashTypePresentNilModalViewController,
-    /* 数组越界异常*/
-    AACCrashTypeIndexBeyondBounds,
-    /* UIView 将自身作为 subview*/
-    AACCrashTypeAddSelfAsSubview,
+/**
+ 崩溃类型
+
+ - AACTypeNone: 无
+ - AACTypeAll: 全部崩溃类型
+ - AACTypeUIKitError: 布局控件操作错误
+ - AACTypeObjectTypeError: 数组/字典等集合类型错误
+ - AACTypeUnrecognizedSelector: 找不到方法实现
+ */
+typedef NS_OPTIONS(NSUInteger, AACType) {
+    AACTypeUIKitError = 1 << 0,
+    AACTypeObjectTypeError = 1 << 1,
+    AACTypeUnrecognizedSelector = 1 << 2,
+    
+    AACTypeNone = 0,
+    AACTypeAll = ~0UL
 };
-typedef void(^AACManagerRecordCrashBlock)(id instance,AACCrashType type,NSString *reason);
+typedef void(^AACManagerRecordCrashBlock)(id instance,AACType type,NSString *reason);
 
 @interface AACManager : NSObject
 
 /**
- 开关,默认打开
+ 开关,默认关闭
  */
-@property(nonatomic,assign) BOOL enable;
+@property(nonatomic,assign) AACType enableType;
 
 /**
  记录崩溃信息
  */
 @property(nonatomic,copy) AACManagerRecordCrashBlock recordCrashBlock;
 
-/**
- 未识别的方法需要过滤的类类型
- */
-@property(nonatomic,copy,readonly) NSArray<NSString *> *ignoreClassesForUnrecognizedSelector;
-
 + (instancetype)sharedInstance;
 
-#pragma mark - 记录方法失败
+/**
+ 检测是否支持防止该类型
+ */
++ (BOOL)enableForType:(AACType)type;
 
-+ (void)recordCrashLogWithInstance:(id)instance type:(AACCrashType)type reason:(NSString *)reason;
+/**
+ 在全局记录崩溃
+ */
+
++ (void)recordCrashLogWithInstance:(id)instance type:(AACType)type reason:(NSString *)reason;
 
 #pragma mark - 替换方法实现
 

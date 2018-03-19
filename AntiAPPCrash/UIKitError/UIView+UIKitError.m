@@ -6,11 +6,11 @@
 //  Copyright © 2018年 songguo. All rights reserved.
 //
 
-#import "UIView+add_self_as_subview.h"
+#import "UIView+UIKitError.h"
 
 #import "AACManager.h"
 
-@implementation UIView (add_self_as_subview)
+@implementation UIView (UIKitError)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -21,9 +21,9 @@
 }
 
 - (void)aac_addSubview:(UIView *)view {
-    if ([view isEqual:self] && [AACManager sharedInstance].enable) {
+    if ([view isEqual:self] && [AACManager enableForType:AACTypeUIKitError]) {
         NSString *crashReason = [NSString stringWithFormat:@"NSInvalidArgumentException 'Can't add self as subview'"];
-        [AACManager recordCrashLogWithInstance:self type:AACCrashTypePresentNilModalViewController reason:crashReason];
+        [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
         return;
     }
     [self aac_addSubview:view];

@@ -12,18 +12,9 @@
 
 @interface AACManager ()
 
-@property(nonatomic,copy,readwrite) NSArray<NSString *> *ignoreClassesForUnrecognizedSelector;
-
 @end
 
 @implementation AACManager
-
-- (NSArray<NSString *> *)ignoreClassesForUnrecognizedSelector {
-    if (!_ignoreClassesForUnrecognizedSelector) {
-        _ignoreClassesForUnrecognizedSelector = @[@"UIKeyboard"];
-    }
-    return _ignoreClassesForUnrecognizedSelector;
-}
 
 + (instancetype)sharedInstance {
     static AACManager *instance=nil;
@@ -37,20 +28,23 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.enable = YES;
+        self.enableType = AACTypeNone;
     }
     return self;
 }
 
-#pragma mark - 记录方法失败
++ (BOOL)enableForType:(AACType)type {
+    if (AACTypeAll == type) {
+        return YES;
+    }
+    return [AACManager sharedInstance].enableType & type;
+}
 
-+ (void)recordCrashLogWithInstance:(id)instance type:(AACCrashType)type reason:(NSString *)reason{
++ (void)recordCrashLogWithInstance:(id)instance type:(AACType)type reason:(NSString *)reason{
     if ([AACManager sharedInstance].recordCrashBlock) {
         [AACManager sharedInstance].recordCrashBlock(instance, type, reason);
     }
 }
-
-#pragma mark 替换方法实现
 
 // 替换实例方法
 + (void)exchangeInstanceMethodWithClass:(Class)clazz originalSel:(SEL)originalSel swizzledSel:(SEL)swizzledSel {

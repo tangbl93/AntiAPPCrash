@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (add_self_as_subview)
+// # Can't add self as subview
+@interface UIView (UIKitError)
 
 @end

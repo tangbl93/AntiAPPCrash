@@ -6,11 +6,11 @@
 //  Copyright © 2017年 songguo. All rights reserved.
 //
 
-#import "UIViewController+aac_accessing_cachedSystemAnimationFence.h"
+#import "UIViewController+UIKitError.h"
 
 #import "AACManager.h"
 
-@implementation UIViewController (aac_accessing_cachedSystemAnimationFence)
+@implementation UIViewController (UIKitError)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -22,7 +22,7 @@
 
 - (void)aac_presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ __nullable)(void))completion {
     
-    if (![AACManager sharedInstance].enable) {
+    if (![AACManager enableForType:AACTypeUIKitError]) {
         [self aac_presentViewController:viewControllerToPresent animated:flag completion:completion];
         return;
     }
@@ -30,14 +30,14 @@
     // Application tried to present a nil modal view controller on target
     if (!viewControllerToPresent) {
         NSString *crashReason = [NSString stringWithFormat:@"NSInvalidArgumentException Application tried to present a nil modal view controller on target: %@",self];
-        [AACManager recordCrashLogWithInstance:self type:AACCrashTypePresentNilModalViewController reason:crashReason];
+        [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
         return;
     }
     
     // Application tried to present modally an active controller
     if (viewControllerToPresent && viewControllerToPresent.presentingViewController) {
         NSString *crashReason = [NSString stringWithFormat:@"NSInvalidArgumentException Application tried to present modally an active controller: %@",self];
-        [AACManager recordCrashLogWithInstance:self type:AACCrashTypePresentModallyActiveController reason:crashReason];
+        [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
         return;
     }
     
@@ -47,7 +47,7 @@
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *crashReason = [NSString stringWithFormat:@"NSInternalInconsistencyException accessing _cachedSystemAnimationFence requires the main thread: %@",self];
-            [AACManager recordCrashLogWithInstance:self type:AACCrashTypeAccessingCachedSystemAnimationFence reason:crashReason];
+            [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
             [self aac_presentViewController:viewControllerToPresent animated:flag completion:completion];
         });
     }

@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (index_beyond_bounds)
+// #1. index beyond bounds
+@interface NSArray (ObjectTypeError)
 
 @end
 
-@interface NSMutableArray (index_beyond_bounds)
+@interface NSMutableArray (ObjectTypeError)
 
 @end

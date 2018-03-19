@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (aac_unrecognized_selector)
+// # unrecognized selector
+@interface NSObject (UnrecognizedSelector)
 
 @end

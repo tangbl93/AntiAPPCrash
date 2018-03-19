@@ -8,28 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4D0206BC1FDA6206009B09E7 /* AntiAPPCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0206BA1FDA6206009B09E7 /* AntiAPPCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D0206CA1FDA623F009B09E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0206C91FDA623F009B09E7 /* AppDelegate.m */; };
-		4D0206CD1FDA623F009B09E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0206CC1FDA623F009B09E7 /* ViewController.m */; };
-		4D0206D01FDA623F009B09E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0206CE1FDA623F009B09E7 /* Main.storyboard */; };
-		4D0206D21FDA623F009B09E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0206D11FDA623F009B09E7 /* Assets.xcassets */; };
-		4D0206D51FDA623F009B09E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0206D31FDA623F009B09E7 /* LaunchScreen.storyboard */; };
-		4D0206D81FDA623F009B09E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0206D71FDA623F009B09E7 /* main.m */; };
 		4D0206DE1FDA65DD009B09E7 /* AACManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0206DC1FDA65DD009B09E7 /* AACManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D0206DF1FDA65DD009B09E7 /* AACManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0206DD1FDA65DD009B09E7 /* AACManager.m */; };
-		4D4275191FDD06670077442B /* AntiAPPCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0206B71FDA6206009B09E7 /* AntiAPPCrash.framework */; };
 		4D4275201FDEB9AA0077442B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D42751F1FDEB9A90077442B /* README.md */; };
-		4D4275271FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D4275251FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h */; };
-		4D4275281FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4275261FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m */; };
-		4D7F37921FFCAA4B00568023 /* NSArray+index_beyond_bounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */; };
-		4D7F37931FFCAA4B00568023 /* NSArray+index_beyond_bounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */; };
-		4DA3FEF31FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA3FEF11FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h */; };
-		4DA3FEF41FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3FEF21FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m */; };
-		4DF57B731FFCC2FE00118449 /* UIView+add_self_as_subview.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF57B711FFCC2FE00118449 /* UIView+add_self_as_subview.h */; };
-		4DF57B741FFCC2FE00118449 /* UIView+add_self_as_subview.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF57B721FFCC2FE00118449 /* UIView+add_self_as_subview.m */; };
+		4D4275271FDEBCC30077442B /* UIViewController+UIKitError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D4275251FDEBCC30077442B /* UIViewController+UIKitError.h */; };
+		4D4275281FDEBCC30077442B /* UIViewController+UIKitError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4275261FDEBCC30077442B /* UIViewController+UIKitError.m */; };
+		4D7F37921FFCAA4B00568023 /* NSArray+ObjectTypeError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F37901FFCAA4B00568023 /* NSArray+ObjectTypeError.h */; };
+		4D7F37931FFCAA4B00568023 /* NSArray+ObjectTypeError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F37911FFCAA4B00568023 /* NSArray+ObjectTypeError.m */; };
+		4DA3FEF31FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA3FEF11FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.h */; };
+		4DA3FEF41FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3FEF21FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.m */; };
+		4DC77516205F9CF400A3EA62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC77515205F9CF400A3EA62 /* AppDelegate.m */; };
+		4DC7751E205F9CF400A3EA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7751D205F9CF400A3EA62 /* Assets.xcassets */; };
+		4DC77521205F9CF400A3EA62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC7751F205F9CF400A3EA62 /* LaunchScreen.storyboard */; };
+		4DC77524205F9CF400A3EA62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC77523205F9CF400A3EA62 /* main.m */; };
+		4DF57B731FFCC2FE00118449 /* UIView+UIKitError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF57B711FFCC2FE00118449 /* UIView+UIKitError.h */; };
+		4DF57B741FFCC2FE00118449 /* UIView+UIKitError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF57B721FFCC2FE00118449 /* UIView+UIKitError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D4275161FDD06430077442B /* PBXContainerItemProxy */ = {
+		4DC77528205F9DBB00A3EA62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D0206AE1FDA6205009B09E7 /* Project object */;
 			proxyType = 1;
@@ -42,28 +39,25 @@
 		4D0206B71FDA6206009B09E7 /* AntiAPPCrash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AntiAPPCrash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0206BA1FDA6206009B09E7 /* AntiAPPCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntiAPPCrash.h; sourceTree = "<group>"; };
 		4D0206BB1FDA6206009B09E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D0206C61FDA623F009B09E7 /* AntiAPPCrashDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiAPPCrashDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D0206C81FDA623F009B09E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4D0206C91FDA623F009B09E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4D0206CB1FDA623F009B09E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4D0206CC1FDA623F009B09E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4D0206CF1FDA623F009B09E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4D0206D11FDA623F009B09E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D0206D41FDA623F009B09E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4D0206D61FDA623F009B09E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D0206D71FDA623F009B09E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D0206DC1FDA65DD009B09E7 /* AACManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACManager.h; sourceTree = "<group>"; };
 		4D0206DD1FDA65DD009B09E7 /* AACManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACManager.m; sourceTree = "<group>"; };
 		4D42751F1FDEB9A90077442B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4D4275251FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+aac_accessing_cachedSystemAnimationFence.h"; sourceTree = "<group>"; };
-		4D4275261FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+aac_accessing_cachedSystemAnimationFence.m"; sourceTree = "<group>"; };
+		4D4275251FDEBCC30077442B /* UIViewController+UIKitError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UIKitError.h"; sourceTree = "<group>"; };
+		4D4275261FDEBCC30077442B /* UIViewController+UIKitError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UIKitError.m"; sourceTree = "<group>"; };
 		4D49E9F21FE13BF2005BEED9 /* AntiAPPCrash.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AntiAPPCrash.podspec; sourceTree = "<group>"; };
-		4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+index_beyond_bounds.h"; sourceTree = "<group>"; };
-		4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+index_beyond_bounds.m"; sourceTree = "<group>"; };
-		4DA3FEF11FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+aac_unrecognized_selector.h"; sourceTree = "<group>"; };
-		4DA3FEF21FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+aac_unrecognized_selector.m"; sourceTree = "<group>"; };
-		4DF57B711FFCC2FE00118449 /* UIView+add_self_as_subview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+add_self_as_subview.h"; sourceTree = "<group>"; };
-		4DF57B721FFCC2FE00118449 /* UIView+add_self_as_subview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+add_self_as_subview.m"; sourceTree = "<group>"; };
+		4D7F37901FFCAA4B00568023 /* NSArray+ObjectTypeError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+ObjectTypeError.h"; sourceTree = "<group>"; };
+		4D7F37911FFCAA4B00568023 /* NSArray+ObjectTypeError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ObjectTypeError.m"; sourceTree = "<group>"; };
+		4DA3FEF11FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+UnrecognizedSelector.h"; sourceTree = "<group>"; };
+		4DA3FEF21FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UnrecognizedSelector.m"; sourceTree = "<group>"; };
+		4DC77512205F9CF300A3EA62 /* AntiAPPCrashDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiAPPCrashDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC77514205F9CF400A3EA62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DC77515205F9CF400A3EA62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DC7751D205F9CF400A3EA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DC77520205F9CF400A3EA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DC77522205F9CF400A3EA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC77523205F9CF400A3EA62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DF57B711FFCC2FE00118449 /* UIView+UIKitError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UIKitError.h"; sourceTree = "<group>"; };
+		4DF57B721FFCC2FE00118449 /* UIView+UIKitError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIKitError.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +68,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D0206C31FDA623F009B09E7 /* Frameworks */ = {
+		4DC7750F205F9CF300A3EA62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D4275191FDD06670077442B /* AntiAPPCrash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +84,7 @@
 				4D42751F1FDEB9A90077442B /* README.md */,
 				4D49E9F21FE13BF2005BEED9 /* AntiAPPCrash.podspec */,
 				4D0206B91FDA6206009B09E7 /* AntiAPPCrash */,
-				4D0206C71FDA623F009B09E7 /* AntiAPPCrashDemo */,
+				4DC77513205F9CF400A3EA62 /* AntiAPPCrashDemo */,
 				4D0206B81FDA6206009B09E7 /* Products */,
 				4D4275181FDD06670077442B /* Frameworks */,
 			);
@@ -101,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0206B71FDA6206009B09E7 /* AntiAPPCrash.framework */,
-				4D0206C61FDA623F009B09E7 /* AntiAPPCrashDemo.app */,
+				4DC77512205F9CF300A3EA62 /* AntiAPPCrashDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,10 +102,9 @@
 		4D0206B91FDA6206009B09E7 /* AntiAPPCrash */ = {
 			isa = PBXGroup;
 			children = (
-				4DF57B701FFCC2E100118449 /* add_self_as_subview */,
-				4D7F378F1FFCA9E500568023 /* index_beyond_bounds */,
-				4D42751E1FDEB94E0077442B /* accessing_cachedSystemAnimationFence */,
-				4D0206E01FDA66F4009B09E7 /* unrecognized_selector */,
+				4DC774FE205F8CD000A3EA62 /* ObjectTypeError */,
+				4DF57B701FFCC2E100118449 /* UIKitError */,
+				4D0206E01FDA66F4009B09E7 /* UnrecognizedSelector */,
 				4D0206BB1FDA6206009B09E7 /* Info.plist */,
 				4D0206BA1FDA6206009B09E7 /* AntiAPPCrash.h */,
 				4D0206DC1FDA65DD009B09E7 /* AACManager.h */,
@@ -121,29 +113,13 @@
 			path = AntiAPPCrash;
 			sourceTree = "<group>";
 		};
-		4D0206C71FDA623F009B09E7 /* AntiAPPCrashDemo */ = {
+		4D0206E01FDA66F4009B09E7 /* UnrecognizedSelector */ = {
 			isa = PBXGroup;
 			children = (
-				4D0206C81FDA623F009B09E7 /* AppDelegate.h */,
-				4D0206C91FDA623F009B09E7 /* AppDelegate.m */,
-				4D0206CB1FDA623F009B09E7 /* ViewController.h */,
-				4D0206CC1FDA623F009B09E7 /* ViewController.m */,
-				4D0206CE1FDA623F009B09E7 /* Main.storyboard */,
-				4D0206D11FDA623F009B09E7 /* Assets.xcassets */,
-				4D0206D31FDA623F009B09E7 /* LaunchScreen.storyboard */,
-				4D0206D61FDA623F009B09E7 /* Info.plist */,
-				4D0206D71FDA623F009B09E7 /* main.m */,
+				4DA3FEF11FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.h */,
+				4DA3FEF21FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.m */,
 			);
-			path = AntiAPPCrashDemo;
-			sourceTree = "<group>";
-		};
-		4D0206E01FDA66F4009B09E7 /* unrecognized_selector */ = {
-			isa = PBXGroup;
-			children = (
-				4DA3FEF11FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h */,
-				4DA3FEF21FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m */,
-			);
-			path = unrecognized_selector;
+			path = UnrecognizedSelector;
 			sourceTree = "<group>";
 		};
 		4D4275181FDD06670077442B /* Frameworks */ = {
@@ -153,31 +129,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4D42751E1FDEB94E0077442B /* accessing_cachedSystemAnimationFence */ = {
+		4DC774FE205F8CD000A3EA62 /* ObjectTypeError */ = {
 			isa = PBXGroup;
 			children = (
-				4D4275251FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h */,
-				4D4275261FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m */,
+				4D7F37901FFCAA4B00568023 /* NSArray+ObjectTypeError.h */,
+				4D7F37911FFCAA4B00568023 /* NSArray+ObjectTypeError.m */,
 			);
-			path = accessing_cachedSystemAnimationFence;
+			path = ObjectTypeError;
 			sourceTree = "<group>";
 		};
-		4D7F378F1FFCA9E500568023 /* index_beyond_bounds */ = {
+		4DC77513205F9CF400A3EA62 /* AntiAPPCrashDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4D7F37901FFCAA4B00568023 /* NSArray+index_beyond_bounds.h */,
-				4D7F37911FFCAA4B00568023 /* NSArray+index_beyond_bounds.m */,
+				4DC77514205F9CF400A3EA62 /* AppDelegate.h */,
+				4DC77515205F9CF400A3EA62 /* AppDelegate.m */,
+				4DC7751D205F9CF400A3EA62 /* Assets.xcassets */,
+				4DC7751F205F9CF400A3EA62 /* LaunchScreen.storyboard */,
+				4DC77522205F9CF400A3EA62 /* Info.plist */,
+				4DC77523205F9CF400A3EA62 /* main.m */,
 			);
-			path = index_beyond_bounds;
+			path = AntiAPPCrashDemo;
 			sourceTree = "<group>";
 		};
-		4DF57B701FFCC2E100118449 /* add_self_as_subview */ = {
+		4DF57B701FFCC2E100118449 /* UIKitError */ = {
 			isa = PBXGroup;
 			children = (
-				4DF57B711FFCC2FE00118449 /* UIView+add_self_as_subview.h */,
-				4DF57B721FFCC2FE00118449 /* UIView+add_self_as_subview.m */,
+				4D4275251FDEBCC30077442B /* UIViewController+UIKitError.h */,
+				4D4275261FDEBCC30077442B /* UIViewController+UIKitError.m */,
+				4DF57B711FFCC2FE00118449 /* UIView+UIKitError.h */,
+				4DF57B721FFCC2FE00118449 /* UIView+UIKitError.m */,
 			);
-			path = add_self_as_subview;
+			path = UIKitError;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0206DE1FDA65DD009B09E7 /* AACManager.h in Headers */,
-				4D7F37921FFCAA4B00568023 /* NSArray+index_beyond_bounds.h in Headers */,
+				4D7F37921FFCAA4B00568023 /* NSArray+ObjectTypeError.h in Headers */,
 				4D0206BC1FDA6206009B09E7 /* AntiAPPCrash.h in Headers */,
-				4DF57B731FFCC2FE00118449 /* UIView+add_self_as_subview.h in Headers */,
-				4DA3FEF31FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.h in Headers */,
-				4D4275271FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.h in Headers */,
+				4DF57B731FFCC2FE00118449 /* UIView+UIKitError.h in Headers */,
+				4DA3FEF31FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.h in Headers */,
+				4D4275271FDEBCC30077442B /* UIViewController+UIKitError.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,22 +199,22 @@
 			productReference = 4D0206B71FDA6206009B09E7 /* AntiAPPCrash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4D0206C51FDA623F009B09E7 /* AntiAPPCrashDemo */ = {
+		4DC77511205F9CF300A3EA62 /* AntiAPPCrashDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D0206D91FDA623F009B09E7 /* Build configuration list for PBXNativeTarget "AntiAPPCrashDemo" */;
+			buildConfigurationList = 4DC77525205F9CF400A3EA62 /* Build configuration list for PBXNativeTarget "AntiAPPCrashDemo" */;
 			buildPhases = (
-				4D0206C21FDA623F009B09E7 /* Sources */,
-				4D0206C31FDA623F009B09E7 /* Frameworks */,
-				4D0206C41FDA623F009B09E7 /* Resources */,
+				4DC7750E205F9CF300A3EA62 /* Sources */,
+				4DC7750F205F9CF300A3EA62 /* Frameworks */,
+				4DC77510205F9CF300A3EA62 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4D4275171FDD06430077442B /* PBXTargetDependency */,
+				4DC77529205F9DBB00A3EA62 /* PBXTargetDependency */,
 			);
 			name = AntiAPPCrashDemo;
 			productName = AntiAPPCrashDemo;
-			productReference = 4D0206C61FDA623F009B09E7 /* AntiAPPCrashDemo.app */;
+			productReference = 4DC77512205F9CF300A3EA62 /* AntiAPPCrashDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -248,9 +230,9 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					4D0206C51FDA623F009B09E7 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+					4DC77511205F9CF300A3EA62 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -268,7 +250,7 @@
 			projectRoot = "";
 			targets = (
 				4D0206B61FDA6206009B09E7 /* AntiAPPCrash */,
-				4D0206C51FDA623F009B09E7 /* AntiAPPCrashDemo */,
+				4DC77511205F9CF300A3EA62 /* AntiAPPCrashDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -282,13 +264,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D0206C41FDA623F009B09E7 /* Resources */ = {
+		4DC77510205F9CF300A3EA62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0206D51FDA623F009B09E7 /* LaunchScreen.storyboard in Resources */,
-				4D0206D21FDA623F009B09E7 /* Assets.xcassets in Resources */,
-				4D0206D01FDA623F009B09E7 /* Main.storyboard in Resources */,
+				4DC77521205F9CF400A3EA62 /* LaunchScreen.storyboard in Resources */,
+				4DC7751E205F9CF400A3EA62 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,46 +281,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0206DF1FDA65DD009B09E7 /* AACManager.m in Sources */,
-				4D7F37931FFCAA4B00568023 /* NSArray+index_beyond_bounds.m in Sources */,
-				4DF57B741FFCC2FE00118449 /* UIView+add_self_as_subview.m in Sources */,
-				4DA3FEF41FDCFFCD00F756EB /* NSObject+aac_unrecognized_selector.m in Sources */,
-				4D4275281FDEBCC30077442B /* UIViewController+aac_accessing_cachedSystemAnimationFence.m in Sources */,
+				4D7F37931FFCAA4B00568023 /* NSArray+ObjectTypeError.m in Sources */,
+				4DF57B741FFCC2FE00118449 /* UIView+UIKitError.m in Sources */,
+				4DA3FEF41FDCFFCD00F756EB /* NSObject+UnrecognizedSelector.m in Sources */,
+				4D4275281FDEBCC30077442B /* UIViewController+UIKitError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D0206C21FDA623F009B09E7 /* Sources */ = {
+		4DC7750E205F9CF300A3EA62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0206CD1FDA623F009B09E7 /* ViewController.m in Sources */,
-				4D0206D81FDA623F009B09E7 /* main.m in Sources */,
-				4D0206CA1FDA623F009B09E7 /* AppDelegate.m in Sources */,
+				4DC77524205F9CF400A3EA62 /* main.m in Sources */,
+				4DC77516205F9CF400A3EA62 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4D4275171FDD06430077442B /* PBXTargetDependency */ = {
+		4DC77529205F9DBB00A3EA62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D0206B61FDA6206009B09E7 /* AntiAPPCrash */;
-			targetProxy = 4D4275161FDD06430077442B /* PBXContainerItemProxy */;
+			targetProxy = 4DC77528205F9DBB00A3EA62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D0206CE1FDA623F009B09E7 /* Main.storyboard */ = {
+		4DC7751F205F9CF400A3EA62 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4D0206CF1FDA623F009B09E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4D0206D31FDA623F009B09E7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D0206D41FDA623F009B09E7 /* Base */,
+				4DC77520205F9CF400A3EA62 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -503,36 +475,34 @@
 			};
 			name = Release;
 		};
-		4D0206DA1FDA623F009B09E7 /* Debug */ = {
+		4DC77526205F9CF400A3EA62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AntiAPPCrashDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.songguo.AntiAPPCrashDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4D0206DB1FDA623F009B09E7 /* Release */ = {
+		4DC77527205F9CF400A3EA62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AntiAPPCrashDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.songguo.AntiAPPCrashDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -558,11 +528,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D0206D91FDA623F009B09E7 /* Build configuration list for PBXNativeTarget "AntiAPPCrashDemo" */ = {
+		4DC77525205F9CF400A3EA62 /* Build configuration list for PBXNativeTarget "AntiAPPCrashDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D0206DA1FDA623F009B09E7 /* Debug */,
-				4D0206DB1FDA623F009B09E7 /* Release */,
+				4DC77526205F9CF400A3EA62 /* Debug */,
+				4DC77527205F9CF400A3EA62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
