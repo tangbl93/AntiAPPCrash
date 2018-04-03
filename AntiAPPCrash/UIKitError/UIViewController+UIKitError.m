@@ -41,6 +41,33 @@
         return;
     }
     
+    if ([viewControllerToPresent isKindOfClass:[UIAlertController class]]) {
+        UIAlertController *alertController = (UIAlertController *)viewControllerToPresent;
+        
+        // UIAlertController must have a title, a message or an action to display
+        if (!alertController.title && !alertController.message && !(alertController.actions.count > 0)) {
+            NSString *crashReason = [NSString stringWithFormat:@"NSInternalInconsistencyException UIAlertController must have a title, a message or an action to display: %@",self];
+            [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
+            return;
+        }
+        
+        // Your application has presented a UIAlertController of style UIAlertControllerStyleActionSheet
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad && alertController.preferredStyle == UIAlertControllerStyleActionSheet) {
+            if ([alertController respondsToSelector:@selector(popoverPresentationController)]) {
+                UIPopoverPresentationController *popover = alertController.popoverPresentationController;
+                if (popover) {
+                    if (!popover.barButtonItem && !popover.sourceView) {
+                        popover.sourceView = self.view;
+                        popover.permittedArrowDirections = 0;
+                        popover.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+                        NSString *crashReason = [NSString stringWithFormat:@"Your application has presented a UIAlertController of style UIAlertControllerStyleActionSheet: %@",self];
+                        [AACManager recordCrashLogWithInstance:self type:AACTypeUIKitError reason:crashReason];
+                    }
+                }
+            }
+        }
+    }
+    
     // NSInternalInconsistencyException accessing _cachedSystemAnimationFence requires the main thread
     if ([NSThread isMainThread]) {
         [self aac_presentViewController:viewControllerToPresent animated:flag completion:completion];

@@ -33,6 +33,8 @@
 - Application tried to present a nil modal view controller on target
 - index beyond bounds
 - add self as subview
+- Your application has presented a UIAlertController of style UIAlertControllerStyleActionSheet
+- UIAlertController must have a title, a message or an action to display
 
 # 参考的案例
 

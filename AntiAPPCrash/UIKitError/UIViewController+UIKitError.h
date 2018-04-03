@@ -11,6 +11,8 @@
 // # accessing _cachedSystemAnimationFence requires the main thread
 // # Application tried to present modally an active controller
 // # Application tried to present a nil modal view controller on target
+// # Your application has presented a UIAlertController of style UIAlertControllerStyleActionSheet
+// # UIAlertController must have a title, a message or an action to display
 @interface UIViewController (UIKitError)
 
 @end

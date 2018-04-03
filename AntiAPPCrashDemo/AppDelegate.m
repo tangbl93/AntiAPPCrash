@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <AntiAPPCrash/AntiAPPCrash.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,25 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window.rootViewController = [UIViewController new];
+    self.window = [[UIWindow alloc] init];
+    self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
-    
-    // setup
-    AACManager.sharedInstance.enableType = AACTypeUIKitError | AACTypeUnrecognizedSelector;
-    [AACManager sharedInstance].recordCrashBlock = ^(id instance, AACType type, NSString *reason) {
-        NSLog(@"AACManager recordCrashBlock class = %@,type = %ld, reason = %@",instance,type,reason);
-    };
-    
-    // uikit error
-    UIView *view = [UIView new];
-    [view addSubview:view];
-    
-    // objectType error
-    NSArray *a1 = @[];
-    id val1 = a1[1];
-    
-    // UnrecognizedSelector
-    [self performSelectorOnMainThread:@selector(viewDidLoad) withObject:nil waitUntilDone:NO];
     
     return YES;
 }
