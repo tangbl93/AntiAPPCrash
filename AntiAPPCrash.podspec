@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AntiAPPCrash'
-  s.version          = '0.0.1'
+  s.version          = '0.0.5'
   s.summary          = 'AntiAPPCrash. 防止APP常见的崩溃问题'
 
   s.description      = <<-DESC
